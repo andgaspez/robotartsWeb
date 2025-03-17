@@ -62,8 +62,7 @@ body {
 }
 
 .footer-logo {
-  height: 50px;
-  max-width: 150px;
+  /* No resizing — let the image use its natural size */
   object-fit: contain;
 }
 
