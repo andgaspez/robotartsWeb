@@ -1,11 +1,13 @@
-/* Reset and base styles */
-body {
+/* Make footer stick to bottom if page is short */
+html, body {
+  height: 100%;
   margin: 0;
   font-family: Arial, sans-serif;
-  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Floating Top Bar */
+/* Navbar at the top */
 .navbar {
   position: fixed;
   top: 0;
@@ -33,36 +35,41 @@ body {
   text-decoration: underline;
 }
 
-/* Page Content */
+/* Main content fills the space between navbar and footer */
 .content {
-  padding: 20px;
+  flex: 1;
+  padding: 80px 20px 20px 20px; /* top padding to clear navbar */
 }
 
-/* Footer Section */
+/* Footer styling */
 .footer {
-  background-color: #111;
-  color: white;
+  background-color: #f9f9f9; /* light gray close to white */
+  color: #333;
   text-align: center;
   padding: 20px 10px;
-  margin-top: 40px;
+  border-top: 1px solid #ddd; /* subtle separator line */
 }
 
+/* "Partners" label */
 .footer p {
   margin-bottom: 10px;
   font-weight: bold;
   font-size: 16px;
 }
 
+/* Logo container - horizontal alignment */
 .footer-logos {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
   align-items: center;
+  flex-wrap: wrap; /* allows wrap on small screens */
+  gap: 30px;
 }
 
+/* Logo style */
 .footer-logo {
-  /* No resizing — let the image use its natural size */
+  display: inline-block;
+  max-height: 60px;
   object-fit: contain;
 }
 
