@@ -31,6 +31,9 @@ html, body {
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 15px 20px;   
 }
 
 .nav-links a {
@@ -42,6 +45,58 @@ html, body {
 
 .nav-links a:hover {
   text-decoration: underline;
+}
+
+/* Ensure dropdown link looks like other nav links */
+.dropdown > .nav-link {
+  padding: 5px 10px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+  display: inline-block;
+}
+
+/* Fix alignment inside navbar */
+.nav-links > .dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Dropdown container */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1001;
+  top: 100%;
+  left: 0;
+  flex-direction: column;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+  display: flex;
+}
+
+/* Style for dropdown links */
+.dropdown-content a {
+  color: #333;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
 }
 
 /* Main content */
@@ -78,4 +133,3 @@ html, body {
   display: inline-block;
   object-fit: contain;
 }
-
